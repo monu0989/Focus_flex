@@ -1,0 +1,54 @@
+.reaction-zone {
+  background-color: rgba(76, 175, 80, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.reaction-zone h3 {
+  margin: 0 0 10px 0;
+  color: #4caf50;
+  z-index: 1;
+}
+
+.reaction-target {
+  position: absolute;
+  background-color: #4caf50;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  z-index: 2;
+}
+
+.reaction-target:hover {
+  transform: scale(1.05);
+}
+
+.zone-instruction {
+  margin: 10px 0 0 0;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  bottom: 10px;
+  z-index: 1;
+}
+
+/* Mobile optimization */
+@media (max-width: 480px) {
+  .reaction-zone {
+    height: 180px;
+    padding: 10px;
+  }
+}
+
+/* Touch optimization */
+@media (hover: none) {
+  .reaction-target:active {
+    transform: scale(0.95);
+  }
+}
